@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">INFT 3201</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            <!-- Home link -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            
+            <!-- Dropdown 1: Lab1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLab1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownLab1">
+                <li><a class="dropdown-item" href="/lab1/deliverable1">Deliverable1</a></li>
+            
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+            
+            <!-- Dropdown 2: Assignment1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment1">
+                <li><a class="dropdown-item" href="/assignment/assignment1">Write-Up</a></li>
+            
+                <li><a class="dropdown-item" href="/assignment/about">About</a></li>
+                <li><a class="dropdown-item" href="/assignment/terms">Terms and Conditions</a></li>
+                <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+            
+            <!-- Dropdown 3: Lab2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLab2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownLab2">
+                
+                <li><a class="dropdown-item" href="/lab2/Lab2">Lab2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+
+            <!-- assignment2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment2
+              </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment2">
+            <li><a class="dropdown-item" href="/main">Main Page</a></li> <!-- Corrected the link here -->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/">Home</a></li>
+        </ul>
+            </li>
+            <!-- assignment3 -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    assignment3
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment3">
+    <li><a class="dropdown-item" href="/contactform">contact</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/">Home</a></li>
+  </ul>
+</li>
+          </ul>
+
+
+
+          
+          <!-- Search form -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content of the page -->
+    <div class="container my-5">
+        <h1>Project Documentation</h1>
+<h2>Overview</h2>
+<p>This project uses <a href="https://www.11ty.dev/">Eleventy</a> as a static site generator, combined with JSON data to render dynamic content on the site. The structure of the project and the various components are outlined below, along with instructions on how to maintain it.</p>
+<h2>Key Components</h2>
+<h3>1. Eleventy Configuration (<code>.eleventy.js</code>)</h3>
+<p>The <code>eleventyConfig</code> object in this file manages the build process and configuration for the project.</p>
+<ul>
+<li>
+<p><strong>Passthrough Copy:</strong> Ensures that static assets like CSS and images are copied directly to the output folder. This is important to include styles, images, and any other necessary files that aren’t processed by Eleventy.</p>
+<pre><code class="language-javascript">eleventyConfig.addPassthroughCopy(&quot;./src/css&quot;);
+eleventyConfig.addPassthroughCopy(&quot;./src/img&quot;);
+</code></pre>
+<h1>JSON Data (data.json)</h1>
+<p>This file stores the structured data that is displayed on the site. The JSON structure allows the project to easily handle dynamic content like blog posts.</p>
+<pre><code class="language-json">
+&quot;posts&quot;: [
+  {
+   &quot;title&quot;: &quot;The Joy of Coding&quot;,
+  &quot;date&quot;: &quot;2024-09-29&quot;,
+  &quot;content&quot;: &quot;Coding is a skill that empowers individuals to create and solve problems. Whether you're working with JavaScript, Python, or any other language, coding offers endless opportunities to innovate.&quot;,
+  &quot;image&quot;: &quot;/img/code.jpg&quot;
+  },
+  {
+     &quot;title&quot;: &quot;Cats: Our Furry Friends&quot;,
+  &quot;date&quot;: &quot;2024-09-28&quot;,
+  &quot;content&quot;: &quot;Cats have been human companions for thousands of years, offering both companionship and entertainment. From their curious behavior to their playful antics, there's always something to love about these furry creatures.&quot;,
+  &quot;image&quot;: &quot;/img/cat.jpg&quot;
+  }
+]
+
+
+</code></pre>
+</li>
+</ul>
+<h1>Layouts &amp; Templates</h1>
+<p>The project uses Mustache templates to render HTML pages. These templates dynamically inject content from the JSON data using placeholders.</p>
+<p>Example Mustache Template:</p>
+<pre><code class="language-mustache">&lt;h1&gt;Assignment1&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+
+</code></pre>
+<p>These templates are stored in the layouts folder and help in maintaining a consistent structure across different pages of the website.</p>
+<h1>Running the Build Process</h1>
+<p>npx eleventy</p>
+<p>For local development, Eleventy comes with a built-in server. You can start it by running:</p>
+<p>npx eleventy --serve</p>
+<p>The development server will automatically reload the site whenever changes are made to templates, styles, or data.</p>
+<p>You can also run the development server using an npm script:</p>
+<p>npm run dev</p>
+<h1>Term and Conditions</h1>
+<p>The Terms and Conditions page outlines the rules and guidelines that users must agree to when accessing or using the website. This page is essential for legal protection and sets clear expectations for users regarding their responsibilities and rights.</p>
+<h1>About Page</h1>
+<p>The About Page not only introduces Jaden to potential clients or collaborators but also enhances user engagement by encouraging visitors to connect. It establishes a personal brand and reinforces the idea that there is a real person behind the website.</p>
+<h1>404 Page</h1>
+<p><strong>Purpose</strong>:<br>
+The 404 error page is an essential part of any website, as it informs users when they try to access a page that doesn't exist. A well-designed 404 page not only provides an error message but also helps redirect users back to the main site, reducing frustration and improving the user experience.</p>
+<p><strong>Implementation</strong>:<br>
+The 404 page is implemented with a simple title and message informing users that the requested page is not available. A link back to the homepage is provided to guide users to a functional part of the website.</p>
+<h2>Changes in Project Scope Since Lab 1</h2>
+<p>Since Lab 1, the project scope has expanded significantly:</p>
+<h3>Increased Complexity</h3>
+<p>Initially, the project was a simple static site. The decision to incorporate JSON data for dynamic content required a rethinking of the project structure, resulting in additional complexity.</p>
+<h3>Enhanced Features</h3>
+<p>New requirements for a pagination system and an about page were added to improve user experience and provide essential information about the project creator.</p>
+<h3>Styling and Layout Improvements</h3>
+<p>The addition of Mustache templates and a structured layout system enhanced the visual appeal and usability of the website, aligning it more closely with modern web development practices.</p>
+
+    </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+  });
+</script>
+
+<footer class="footer mt-auto py-3 bg-dark text-white text-center">
+  <div class="container">
+    <p>&copy; <span id="year"></span> . All rights reserved.</p>
+  </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

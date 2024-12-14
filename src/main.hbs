@@ -1,0 +1,47 @@
+---
+layout: layouts/default.hbs
+title: Main Page
+pagination:
+  data: api
+  size: 1
+  alias: "blogs"
+---
+
+<div class="container my-5">
+ 
+<!-- Welcome Message -->
+  <div class="text-center mb-5">
+    <h1 class="display-4">Welcome to Our Blog Page!</h1>
+    <p class="lead">Explore our latest posts and stay updated with the newest content.</p>
+  </div>
+
+
+  <ol id="blog-posts" class="list-group mb-3">
+    {{#each pagination.items}} <!-- Loop through the blog posts -->
+      <li class="list-group-item">
+       
+        <!-- Loop through the images array -->
+        {{#if this.image_content}} <!-- Check if there are images in the blog post -->
+          {{#each this.image_content}} <!-- Loop through image content (image array) -->
+            <!-- Check if the small image exists and display it -->
+            {{#if this.formats.small}} 
+              <div class="img-container">
+                <!-- Use the full URL for the 'small' image format -->
+                <img src="http://localhost:1337{{this.formats.small.url}}" alt="{{this.name}}" class="img-fluid img-longer">
+              </div>
+            {{/if}} 
+          {{/each}}
+        {{/if}}
+
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+<div class="d-flex justify-content-center mb-3">
+  <!-- Button for Blogs page -->
+  <button class="btn btn-primary mx-2" onclick="window.location.href='/displayblog'">Go to Blogs</button>
+
+  <!-- Button for CMS blog page -->
+  <button class="btn btn-primary mx-2" onclick="window.location.href='/CMSblog'">Custom Schema</button>
+</div>

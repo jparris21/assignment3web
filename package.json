@@ -1,0 +1,23 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "When you have the code open in your IDE, open the terminal and run either npm start or npx @11ty/eleventy --serve, and then run npm run dev. This should provide you with a link to the website, which will be something like localhost:8080. The header should have a dropdown menu that allows you to navigate to either the instruction page or the deliverable, which includes all the answered requirements as well as the write-up. For the pros and cons, just click on it, and a dropdown tab will show you the information. My references are at the bottom; just click on the links to view the sites. I have two markdown files, instructions.md and deliverable.md, both located within a folder called lab one in my src directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Jaden Parris, 100774161",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "bootstrap": "^5.3.3",
+    "markdown-it": "^14.1.0",
+    "marked": "^15.0.0",
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^6.9.16",
+    "turndown": "^7.2.0"
+  }
+}

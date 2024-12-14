@@ -1,0 +1,20 @@
+[
+  {
+    "title": "The Joy of Coding",
+    "date": "2024-09-29",
+    "content": "Coding is a skill that empowers individuals to create and solve problems. Whether you're working with JavaScript, Python, or any other language, coding offers endless opportunities to innovate.",
+    "image": "/img/code.jpg"
+  },
+  {
+    "title": "Cats: Our Furry Friends",
+    "date": "2024-09-28",
+    "content": "Cats have been human companions for thousands of years, offering both companionship and entertainment. From their curious behavior to their playful antics, there's always something to love about these furry creatures.",
+    "image": "/img/cat.jpg"
+  },
+  {
+    "title": "How Blogging Transformed the Web",
+    "date": "2024-09-27",
+    "content": "Blogging has become one of the most powerful tools for individuals and companies to share information, thoughts, and stories with the world. From personal diaries to corporate updates, blogs have reshaped the way content is consumed on the web.",
+    "image": "/img/blog.jpg"
+  }
+]

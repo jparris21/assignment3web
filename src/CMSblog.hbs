@@ -1,0 +1,53 @@
+---
+layout: layouts/default.hbs
+title: "Blog Posts"
+pagination:
+  data: blogs
+  size: 1
+  alias: "blogs"
+---
+
+<div class="container my-5">
+  <ol id="blog-posts" class="list-group mb-3">
+    {{#each pagination.items}}
+      <li class="list-group-item">
+        <h5 class="mb-1">{{blog_title}}</h5> <!-- Blog title -->
+
+        <!-- Display blog date -->
+        {{#if blog_date}}
+          <p class="text-muted">Posted on: {{blog_date}}</p> <!-- Blog date -->
+        {{/if}}
+
+        {{#if blog_content}} <!-- Check if there is content -->
+          <div>{{{blog_content}}}</div> <!-- Render processed Markdown content as HTML -->
+        {{/if}}
+
+        <!-- Image for the blog post -->
+        {{#if blog_image}} <!-- Check if image exists -->
+          <img src="{{blog_image}}" alt="{{blog_title}}" class="img-fluid blog-image float-end">
+        {{/if}}
+      </li>
+    {{/each}}
+  </ol>
+
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation">
+    <ul id="pagination" class="pagination justify-content-center">
+      {{#if pagination.href.previous}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.previous}}" aria-label="Previous">
+            <span aria-hidden="true">&laquo; Previous</span>
+          </a>
+        </li>
+      {{/if}}
+
+      {{#if pagination.href.next}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.next}}" aria-label="Next">
+            <span aria-hidden="true">Next &raquo;</span>
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</div>

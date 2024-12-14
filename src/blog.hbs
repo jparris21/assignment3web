@@ -1,0 +1,55 @@
+---
+layout: layouts/default.hbs
+title: Blog
+pagination:
+  data: blog
+  size: 1  # Change this to 1 for one post per page
+  alias: blogs
+---
+
+<!-- Main content of the page -->
+<div class="container my-5">
+  <ol id="blog-posts" class="list-group mb-3">
+    {{#each pagination.items}}
+      <li class="list-group-item">
+        <h5 class="mb-1">{{title}}</h5>
+        <small class="text-muted">Date: {{date}}</small>
+        
+        <!-- Image for the blog post -->
+        {{#if image}} <!-- Check if image exists -->
+          <img src="{{image}}" alt="{{title}}" class="img-fluid blog-image float-end" style="max-width: 150px; height: auto; margin: 15px 0;"> <!-- Display image with sizing -->
+        {{/if}}
+
+        <p class="mb-1 blog-content">{{{content}}}</p> <!-- Use triple curly braces for unescaped content -->
+      </li>
+    {{/each}}
+  </ol>
+
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation">
+    <ul id="pagination" class="pagination justify-content-center">
+      {{#if pagination.href.previous}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.previous}}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+      {{/if}}
+
+      <!-- Loop through the pages and display page numbers -->
+      {{#each pagination.pages}}
+        <li class="page-item {{#if isCurrent}}active{{/if}}">
+          <a class="page-link" href="{{href}}">{{this}}</a>
+        </li>
+      {{/each}}
+
+      {{#if pagination.href.next}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.next}}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</div>

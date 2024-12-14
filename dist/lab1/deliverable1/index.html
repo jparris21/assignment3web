@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">INFT 3201</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            <!-- Home link -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            
+            <!-- Dropdown 1: Lab1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLab1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownLab1">
+                <li><a class="dropdown-item" href="/lab1/deliverable1">Deliverable1</a></li>
+            
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+            
+            <!-- Dropdown 2: Assignment1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment1">
+                <li><a class="dropdown-item" href="/assignment/assignment1">Write-Up</a></li>
+            
+                <li><a class="dropdown-item" href="/assignment/about">About</a></li>
+                <li><a class="dropdown-item" href="/assignment/terms">Terms and Conditions</a></li>
+                <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+            
+            <!-- Dropdown 3: Lab2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLab2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownLab2">
+                
+                <li><a class="dropdown-item" href="/lab2/Lab2">Lab2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+              </ul>
+            </li>
+
+            <!-- assignment2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Assignment2
+              </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment2">
+            <li><a class="dropdown-item" href="/main">Main Page</a></li> <!-- Corrected the link here -->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/">Home</a></li>
+        </ul>
+            </li>
+            <!-- assignment3 -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssignment3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    assignment3
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssignment3">
+    <li><a class="dropdown-item" href="/contactform">contact</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/">Home</a></li>
+  </ul>
+</li>
+          </ul>
+
+
+
+          
+          <!-- Search form -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content of the page -->
+    <div class="container my-5">
+        <h1>Deliverable 1</h1>
+<hr>
+<h1>Lab Write-Up</h1>
+<p>My experience using Static Site Generation (SSG) has been quite interesting, especially since I had never used anything like it before. Initially, I didn’t know what to expect and struggled to understand the concept, wondering why we needed SSG when traditional methods like HTML, CSS, JavaScript, or even PHP had worked well in the past.</p>
+<p>However, I soon realized the value of Markdown, which allows you to take content and templates and compile them into HTML effortlessly. This not only saves time but also, in my opinion, makes it easier to format the layout of a site since Markdown is so straightforward to use.</p>
+<p>Setting up 11ty was also easy. The instructions clearly guide you on what to input into the terminal, making the process smooth for tasks like creating pages from data, pagination, events, and more. Working with template engines such as Nunjucks was a bonus, as it significantly simplifies handling Markdown.</p>
+<p>Although I’ve researched other SSGs like Jekyll and Hugo, I’m most comfortable with 11ty since that’s what I’ve been learning. While it may not be the easiest SSG, the clear instructions helped me create my website using template engines and Markdown, which I found enjoyable. I look forward to continuing to learn more about it in the future.</p>
+<h2><strong>Template Engines Comparison</strong></h2>
+<hr>
+<h3><strong>Handlebars</strong></h3>
+<details open>
+<summary>Pros & Cons</summary>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li><strong>Simplicity:</strong> Syntax is similar to HTML.</li>
+<li><strong>Flexibility:</strong> Personalized partials and helpers for code that is reused.</li>
+<li><strong>Compatibility:</strong> Because it builds upon standard HTML, it is simple to integrate with existing code.</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li><strong>Logic-less:</strong> No direct support for logic, all must be pre-processed before compiling the template.</li>
+<li><strong>Complexity in Large Applications:</strong> Can become hard to maintain in large-scale applications.</li>
+</ul>
+</details>
+<hr>
+<h3><strong>Nunjucks</strong></h3>
+<details>
+<summary>Pros & Cons</summary>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li><strong>Efficiency</strong>: By offering reusable code snippets and templates, Nunjucks templates can help to expedite the development process.</li>
+<li><strong>Consistency</strong>: By employing a standardized template structure, they guarantee consistency between various project components or between other projects.</li>
+<li><strong>Customizability</strong>: It is simpler to adapt templates to various use cases when they can be tailored to meet project requirements.</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li><strong>Learning Curve</strong>: For individuals who are not familiar with the software, there can be a learning curve involved in understanding and utilizing Nunjucks templates.</li>
+<li><strong>Overhead</strong>: If templates are complicated or poorly optimized, using them could result in additional overhead and possibly affect performance.</li>
+<li><strong>Restricted Flexibility</strong>: Although templates offer a uniform framework, in some situations where unique solutions are required, they may restrict creativity and flexibility.</li>
+</ul>
+</details>
+<hr>
+<h3><strong>EJS</strong></h3>
+<details>
+<summary>Pros & Cons</summary>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li><strong>Minimal Syntax:</strong> Since EJS employs simple JavaScript, you are presumably already familiar with its usage.</li>
+<li><strong>Quick:</strong> Compiles into incredibly productive JavaScript methods.</li>
+<li><strong>Simple</strong> Embedding: Embedding and combining with HTML is simple.</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li><strong>Can get messy:</strong> Mixing JavaScript and HTML can lead to harder-to-read templates.</li>
+<li><strong>Limited Features:</strong> Lack of some features means you might need additional HTML or JavaScript code to achieve some tasks.</li>
+</ul>
+</details>
+<hr>
+<h2><strong>Choose One Template Engine for Your Assignment</strong></h2>
+<p>For my Assignment 1, I am going to continue using <strong>Nunjucks</strong> because I love the consistency it offers. As I mentioned in the pros of Nunjucks, it ensures consistency across different parts of a project or across multiple projects. While there may be a slight learning curve, practice makes perfect. The customizability, efficiency, and consistency are the main reasons I want to invest more time into my site rather than trying to learn other template engines that may be more complex or have limited features.</p>
+<hr>
+<h2><strong>Other Useful Settings Worth Exploring</strong></h2>
+<h3><strong>Template Formats</strong></h3>
+<p>You can define which file formats Eleventy processes. By default, Eleventy supports file types like <code>.md</code>, <code>.html</code>, and <code>.njk</code>, but you can customize this using the <code>templateFormats</code> option:</p>
+<pre><code class="language-js">module.exports = function (eleventyConfig) {
+  return {
+    templateFormats: [&quot;html&quot;, &quot;liquid&quot;, &quot;njk&quot;],
+  };
+};
+</code></pre>
+<h1>Static Site Generators (SSG) Options</h1>
+<hr>
+<details open>
+  <summary>1. Jekyll</summary>
+<p>Jekyll is one of the most popular open-source static website generators, powering <strong>GitHub Pages</strong>, which offers free hosting for static sites.</p>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li>Free and open source</li>
+<li>Themes can be built as gems and distributed through RubyGems</li>
+<li>Easy and simple to use</li>
+<li>Easy migration from popular platforms like WordPress using Jekyll importers</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li>A significant disadvantage is that the build process becomes slower as content expands.</li>
+<li>The Incremental build is not yet final.</li>
+<li>As of Jekyll 3, no post pagination was integrated in.</li>
+<li>Does not support YAML or the use of variables in titles.</li>
+<li>A lot of plugins age out.</li>
+</ul>
+</details>
+<hr>
+<details>
+  <summary>2. Hugo</summary>
+<p>Hugo is an open-source static website generator that markets itself as a “general-purpose” framework, capable of building a wide range of websites beyond just blogs.</p>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li>Free and open-source</li>
+<li>Lightning-fast speed, performance-optimized</li>
+<li>Pre-installed features: alias-based redirection, pagination, etc.</li>
+<li>Allows for dynamic content driven by APIs.</li>
+<li>Adaptable substitute for Markdown utilizing shortcodes</li>
+<li>Ready-made patterns and templates accessible</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li>Themes use Go templates, requiring knowledge of Go for customization</li>
+<li>No default theme provided</li>
+<li>Lacks extensive support for plugins</li>
+</ul>
+</details>
+<hr>
+<details>
+  <summary>3. Hexo</summary>
+<p>Hexo is another popular option with several advantages:</p>
+<h4><strong>Pros:</strong></h4>
+<ul>
+<li>Lightning-fast operation</li>
+<li>Simple deployment with a single command to GitHub Pages or other servers</li>
+<li>Strong Markdown compatibility</li>
+<li>Easily expandable with plugins</li>
+<li>Free themes and plugins accessible</li>
+</ul>
+<h4><strong>Cons:</strong></h4>
+<ul>
+<li>Relatively large community, but primarily non-English speakers (mainly in China)</li>
+</ul>
+</details>
+<hr>
+<h1>Review the Configuration Section in the 11ty Documentation</h1>
+<hr>
+<p>In this lab, we configured our project's root directory using the <code>eleventy.js</code> configuration file, which enabled us to modify Eleventy to suit the particular requirements of our project. Here's an example of the configuration:</p>
+<pre><code class="language-js">module.exports = function(eleventyConfig) {
+  // Return your Object options:
+  return {
+    dir: {
+      input: &quot;views&quot;,
+      output: &quot;dist&quot;
+    }
+  }
+};
+</code></pre>
+<p>In this setup, the input directory is set to <code>&quot;views&quot;</code> for content files, and the output directory is set to <code>&quot;dist&quot;</code> for the generated static site files. The passthrough copy feature ensures that static assets like CSS and images are copied directly to the output folder without processing, preserving their original structure. This is achieved with the following commands:</p>
+<pre><code class="language-js">eleventyConfig.addPassthroughCopy(&quot;./src/css&quot;);
+eleventyConfig.addPassthroughCopy(&quot;./src/img&quot;);
+</code></pre>
+<p>These instructions copy the contents of the css and img directories directly to the output directory while maintaining the file structure for stylesheets and pictures.</p>
+<h1>What is front matter?</h1>
+<hr>
+<p>The word <strong>front matter</strong> is taken from the book industry, where it describes the content that appears in the first few pages of a book and explains its purpose and production process. Programmers use the term <strong>front matter</strong> to describe a section that sets the context for the content of a markdown file .</p>
+<hr>
+<h1>How Is It Important in Web Development?</h1>
+<hr>
+<p>In web development, <strong>front matter</strong> allows dynamic actions to be performed on a file, such as:</p>
+<ul>
+<li>Creating <strong>dynamic routing</strong> for templates</li>
+<li>Accessing specific data like a <strong>title</strong> or <strong>cover photo</strong></li>
+<li>Generating <strong>preview cards</strong></li>
+<li>Sorting collections based on metadata like <strong>creation dates</strong></li>
+</ul>
+<p>Front matter gives a file the necessary context it needs, allowing metadata to be used without parsing the complete file or depending only on file attributes. This makes managing templates and content much easier.</p>
+<h1>Refrences</h1>
+<ul>
+<li><a href="https://www.scribendi.com/academy/articles/front_matter.en.html">What is Front Matter?</a></li>
+<li><a href="https://kinsta.com/blog/static-site-generator/">Static Site Generator Overview</a></li>
+<li><a href="https://www.techiediaries.com/jekyll-hugo-hexo/">Jekyll, Hugo, and Hexo Comparison</a></li>
+<li><a href="https://www.11ty.dev/docs/config/">Eleventy Documentation - Configuration</a></li>
+</ul>
+
+    </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+  });
+</script>
+
+<footer class="footer mt-auto py-3 bg-dark text-white text-center">
+  <div class="container">
+    <p>&copy; <span id="year"></span> . All rights reserved.</p>
+  </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
